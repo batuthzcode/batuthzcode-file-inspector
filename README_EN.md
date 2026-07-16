@@ -14,7 +14,7 @@
 
 A local-first desktop application and CLI for inspecting suspicious files **without executing or uploading them**.
 
-![THZCodeSpair File Inspector](docs/assets/application.png)
+![THZCodeSpair File Inspector — English interface](docs/assets/application-en.png)
 
 ## What makes it useful?
 
