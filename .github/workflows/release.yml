@@ -1,0 +1,32 @@
+name: Linux release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y libmagic1 exiftool binutils zip
+      - name: Install project
+        run: python -m pip install -e ".[dev]"
+      - name: Test
+        run: pytest
+      - name: Build Linux application
+        run: ./scripts/build_linux.sh
+      - name: Create archive
+        run: cd dist && zip -r THZCodeSpair-File-Inspector-linux-x86_64.zip THZCodeSpair-File-Inspector
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/THZCodeSpair-File-Inspector-linux-x86_64.zip --generate-notes --verify-tag

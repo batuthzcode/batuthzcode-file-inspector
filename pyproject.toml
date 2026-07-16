@@ -19,6 +19,7 @@ classifiers = [
   "Programming Language :: Python :: 3",
   "Operating System :: POSIX :: Linux",
 ]
+urls = { Homepage = "https://github.com/batuthzcode/batuthzcode-file-inspector", Repository = "https://github.com/batuthzcode/batuthzcode-file-inspector", Issues = "https://github.com/batuthzcode/batuthzcode-file-inspector/issues" }
 dependencies = ["PyQt6>=6.8", "python-magic>=0.4.27", "yara-python>=4.5", "pefile>=2024.8.26"]
 
 [project.optional-dependencies]

@@ -1,5 +1,12 @@
 # THZCodeSpair File Inspector
 
+<div align="center">
+
+[![Türkçe](https://img.shields.io/badge/🇹🇷_Türkçe-aktif-168cff?style=for-the-badge)](README.md)
+[![English](https://img.shields.io/badge/🇬🇧_English-open-263140?style=for-the-badge)](README_EN.md)
+
+</div>
+
 ![CI](https://github.com/batuthzcode/batuthzcode-file-inspector/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB)
 ![License](https://img.shields.io/badge/license-MIT-2b8a6e)
