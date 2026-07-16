@@ -1,0 +1,3 @@
+DownloadString
+Invoke-Expression
+FromBase64String

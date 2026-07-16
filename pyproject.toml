@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thzcodespair-file-inspector"
+version = "0.3.0"
+description = "Local-first static file inspection desktop app and CLI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "THZCodeSpair" }]
+keywords = ["malware-analysis", "static-analysis", "yara", "file-inspection", "cybersecurity"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: X11 Applications :: Qt",
+  "Intended Audience :: Information Technology",
+  "Topic :: Security",
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+]
+dependencies = ["PyQt6>=6.8", "python-magic>=0.4.27", "yara-python>=4.5", "pefile>=2024.8.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.9", "pyinstaller>=6.10"]
+
+[project.scripts]
+thz-inspect = "cli:main"
+thzcodespair-inspector = "main:launch"
+
+[tool.setuptools]
+py-modules = ["analyzer", "cli", "history_store", "main", "reporting"]
+
+[tool.setuptools.data-files]
+"share/thzcodespair-inspector/rules" = ["rules/*.yar"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+exclude = ["tests/fixtures"]

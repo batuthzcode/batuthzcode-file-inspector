@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=THZCodeSpair File Inspector
+Comment=Inspect suspicious files locally without executing them
+Exec=thzcodespair-inspector
+Icon=thzcodespair-inspector
+Terminal=false
+Categories=Utility;Security;
+Keywords=malware;static analysis;yara;security;
