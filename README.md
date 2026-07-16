@@ -1,6 +1,6 @@
 # THZCodeSpair File Inspector
 
-![CI](https://github.com/THZCodeSpair/thzcodespair-file-inspector/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/batuthzcode/thzcodespair-file-inspector/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB)
 ![License](https://img.shields.io/badge/license-MIT-2b8a6e)
 ![Privacy](https://img.shields.io/badge/analysis-local--only-168cff)
@@ -38,7 +38,7 @@ It goes beyond a binary antivirus verdict by showing *why* a score was assigned.
 ## Hızlı başlangıç · Quick start
 
 ```bash
-git clone https://github.com/THZCodeSpair/thzcodespair-file-inspector.git
+git clone https://github.com/batuthzcode/thzcodespair-file-inspector.git
 cd thzcodespair-file-inspector
 python3 -m venv .venv
 source .venv/bin/activate
